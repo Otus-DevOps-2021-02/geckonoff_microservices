@@ -1,0 +1,3 @@
+[docker]
+docker178.154.228.152 ansible_host=178.154.228.152 ansible_user=ubuntu  ansible_private_key_file=~/.ssh/ash
+docker178.154.228.162 ansible_host=178.154.228.162 ansible_user=ubuntu  ansible_private_key_file=~/.ssh/ash
