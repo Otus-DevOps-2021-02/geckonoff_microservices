@@ -1,0 +1,13 @@
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+yourname/ubuntu-tmp-file   latest    945b5c1c0310   4 seconds ago   133MB
+<none>                     <none>    78aec3dfe041   3 minutes ago   63.1MB
+ubuntu                     18.04     81bcf752ac3d   14 hours ago    63.1MB
+nginx                      latest    f0b8a9a54136   8 days ago      133MB
+hello-world                latest    d1165f221234   2 months ago    13.3kB
+
+Образ docker содержит дополнительный слой
+"sha256:61838ed06fd81a34248ebe0bc3596c4142e12ee43b5101e133aa6b3c3047c710"
+а также является наследником контейнера nginx
+"Parent": "sha256:f0b8a9a541369db503ff3b9d4fa6de561b300f7363920c2bff4577c6c24c5cf6",
+
+
