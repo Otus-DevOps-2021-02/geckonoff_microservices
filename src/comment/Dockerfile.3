@@ -1,0 +1,19 @@
+FROM ruby:3.0.1-alpine
+
+ENV APP_HOME /app
+ENV COMMENT_DATABASE_HOST post_db_myal
+ENV COMMENT_DATABASE comments
+
+
+
+RUN apk --no-cache --update add build-base
+RUN gem install bundler:1.17.2
+
+WORKDIR $APP_HOME
+
+COPY . $APP_HOME
+
+RUN bundle install
+
+
+CMD ["puma"]
