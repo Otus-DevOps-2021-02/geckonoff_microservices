@@ -1,0 +1,18 @@
+FROM ruby:2.2
+
+ENV APP_HOME /app
+ENV COMMENT_DATABASE_HOST post_db_myal
+ENV COMMENT_DATABASE comments
+
+
+
+RUN apt update -qq && apt install -y build-essential
+
+WORKDIR $APP_HOME
+
+COPY . $APP_HOME
+
+RUN bundle install
+
+
+CMD ["puma"]
