@@ -5,7 +5,9 @@ COPY . /app
 
 RUN apt update -qq && apt install -y build-essential
 
-RUN pip install -r /app/requirements.txt
+
+RUN pip install -r /app/requirements.txt 
+
 
 ENV POST_DATABASE_HOST post_db
 ENV POST_DATABASE posts
