@@ -10,6 +10,13 @@ services:
   ui:
     build: ../src/ui
     image: ${USERNAME}/ui:${SERVVER}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
     ports:
       - 9292:9292/tcp
     networks:
@@ -18,6 +25,13 @@ services:
   post:
     build: ../src/post-py
     image: ${USERNAME}/post:${SERVVER}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
     networks:
       back_net:
         ipv4_address: 10.0.2.4
@@ -26,6 +40,8 @@ services:
   comment:
     build: ../src/comment
     image: ${USERNAME}/comment:${SERVVER}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       back_net:
         ipv4_address: 10.0.2.5
