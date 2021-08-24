@@ -32,6 +32,10 @@
 #       volumes:
 #       - name: mongo-persistent-storage
 #         emptyDir: {}
+      # volumes:
+      # - name: mongo-persistent-storage
+      #   persistentVolumeClaim:
+      #     claimName:  mongo-pvc
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -64,7 +68,6 @@ spec:
         - name: mongo-persistent-storage
           mountPath: /data/db
       volumes:
-      # - name: smongo-gce-pd-storage
       - name: mongo-persistent-storage
         persistentVolumeClaim:
           claimName:  mongo-pvc
