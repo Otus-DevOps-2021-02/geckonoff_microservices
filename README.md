@@ -84,3 +84,6 @@ ui-secret описан в виде манифеста ui-secret.yml
 Создали чарты для reddit app
 Установили gitlab-omnibus из helm chart
 Настроили CI для компонентов reddit app и для деплоя приложения
+
+ДЗ kubernetes-5
+В данном ДЗ мы установили и настроили стек EFK
