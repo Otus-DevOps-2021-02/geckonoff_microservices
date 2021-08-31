@@ -78,3 +78,9 @@ https://hub.docker.com/r/bitnami/mongodb-exporter
 Настроили Network Policy
 Создан ресурс дискового хранилища в YC, добавили подключил к кластеру в виде PersistentVolume и подключили к деплою mongo
 ui-secret описан в виде манифеста ui-secret.yml
+
+ДЗ kubernetes-4
+В данном ДЗ мы установили helm
+Создали чарты для reddit app
+Установили gitlab-omnibus из helm chart
+Настроили CI для компонентов reddit app и для деплоя приложения
