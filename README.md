@@ -71,3 +71,10 @@ https://hub.docker.com/r/bitnami/mongodb-exporter
 Обновили манифесты для Reddit, приложение запущено в локальном minikube
 Создалм новый кластер настройка в yandex cloud
 Приложение запущено в кластере
+
+ДЗ kubernetes-3
+В данном ДЗ мы установили Ingress Controller
+Настроили Ingress на прием только HTTPS трафика
+Настроили Network Policy
+Создан ресурс дискового хранилища в YC, добавили подключил к кластеру в виде PersistentVolume и подключили к деплою mongo
+ui-secret описан в виде манифеста ui-secret.yml
